@@ -1,12 +1,9 @@
+
 server:
-  port: 8989
+  port: 9999
 spring:
   application:
     name: rss-inventory-service
-  cloud:
-    kubernetes:
-      config:
-        namespace: rss-inventory
   h2:
     console:
       enabled: true
@@ -23,11 +20,6 @@ spring:
     password: ${DB_PASSWORD}
     url: ${DB_URL}
 management:
-  metrics:
-    export:
-      prometheus:
-        # enabling prometheus format metrics
-        enabled: true 
   endpoints:
     web:
       exposure:
